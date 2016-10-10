@@ -18,6 +18,7 @@ $(call inherit-product, device/coolpad/porridgen3/full_porridgen3.mk)
 
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=Coolpad/CP8298_I00/CP8298_I00:6.0/MRA58K/6.0.004.P0.160708.8298_I00-OM00:user/release-keys
 
 PRODUCT_NAME := cm_porridgen3
 BOARD_VENDOR := coolpad
