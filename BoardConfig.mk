@@ -20,5 +20,7 @@ include device/wileyfox/porridge/BoardConfig.mk
 
 BOARD_USERDATAIMAGE_PARTITION_SIZE:=12353781760
 
+TARGET_OTA_ASSERT_DEVICE := CP8298_I00,porridgen3
+
 TARGET_KERNEL_CONFIG := cyanogenmod_porridgen3_defconfig
 TARGET_BOOTLOADER_BOARD_NAME := MT6735
