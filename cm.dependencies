@@ -8,7 +8,7 @@
     "target_path": "device/wileyfox/porridge"
   },
   {
-    "repository": "android_kernel_cyanogen_mt6735",
+    "repository": "HostZero/android_kernel_cyanogen_mt6735",
     "target_path": "kernel/cyanogen/mt6735"
   }
 ]
