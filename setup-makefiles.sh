@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DEVICE=porridgek3
-VENDOR=wileyfox
+DEVICE=porridgen3
+VENDOR=coolpad
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
