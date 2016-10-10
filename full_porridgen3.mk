@@ -15,7 +15,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-$(call inherit-product, device/wileyfox/porridgen3/device.mk)
+$(call inherit-product, device/coolpad/porridgen3/device.mk)
 
 PRODUCT_DEVICE := porridgen3
 PRODUCT_NAME := full_porridgen3
