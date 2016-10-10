@@ -13,14 +13,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-BP_DEVICE_PATH := device/coolpad/porridgen3
-MTK_PROJECT_CONFIG := $(BP_DEVICE_PATH)/ProjectConfig.mk
-
-include device/wileyfox/porridge/BoardConfig.mk
-
-BOARD_USERDATAIMAGE_PARTITION_SIZE:=12353781760
-
 TARGET_OTA_ASSERT_DEVICE := CP8298_I00,porridgen3
+
+DEVICE_PATH := device/coolpad/porridgen3
+MTK_PROJECT_CONFIG := $(DEVICE_PATH)/ProjectConfig.mk
+
+MTK_PROJECT_CONFIG ?= $(DEVICE_PATH)/ProjectConfig_porridge.mk
+include $(MTK_PROJECT_CONFIG)
+include device/cyanogen/mt6735-common/BoardConfigCommon.mk
+
+MTK_INTERNAL_CDEFS := $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_NAME),$(if $(filter-out no NO none NONE false FALSE,$($(t))),-D$(t)))
+MTK_INTERNAL_CDEFS += $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_VALUE),$(if $(filter-out no NO none NONE false FALSE,$($(t))),$(foreach v,$(shell echo $($(t)) | tr '[a-z]' '[A-Z]'),-D$(v))))
+MTK_INTERNAL_CDEFS += $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_NAME_VALUE),$(if $(filter-out no NO none NONE false FALSE,$($(t))),-D$(t)=\"$($(t))\"))
+
+COMMON_GLOBAL_CFLAGS += $(MTK_INTERNAL_CDEFS)
+COMMON_GLOBAL_CPPFLAGS += $(MTK_INTERNAL_CDEFS)
 
 TARGET_KERNEL_CONFIG := cyanogenmod_porridgen3_defconfig
 TARGET_BOOTLOADER_BOARD_NAME := MT6735
+
+BOARD_SYSTEMIMAGE_PARTITION_SIZE:=2558525440
+BOARD_CACHEIMAGE_PARTITION_SIZE:=419430400
+BOARD_USERDATAIMAGE_PARTITION_SIZE:=12353781760
+
+TARGET_TAP_TO_WAKE_NODE := /sys/devices/soc/soc:touch/enable_gesture
+
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
