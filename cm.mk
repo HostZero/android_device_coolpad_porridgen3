@@ -14,21 +14,21 @@
 
 VENDOR_BLOBS := vendor/wileyfox/porridgek3/porridgek3-vendor.mk
 
-$(call inherit-product, device/wileyfox/porridgek3/full_porridgek3.mk)
+$(call inherit-product, device/coolpad/porridgen3/full_porridgen3.mk)
 
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 
-PRODUCT_NAME := cm_porridgek3
-BOARD_VENDOR := wileyfox
-PRODUCT_DEVICE := porridgek3
+PRODUCT_NAME := cm_porridgen3
+BOARD_VENDOR := coolpad
+PRODUCT_DEVICE := porridgen3
 
-PRODUCT_GMS_CLIENTID_BASE := android-wileyfox
+PRODUCT_GMS_CLIENTID_BASE := android-coolpad
 
-PRODUCT_MANUFACTURER := Wileyfox
-PRODUCT_MODEL := Wileyfox Spark X
+PRODUCT_MANUFACTURER := coolpad
+PRODUCT_MODEL := Coolpad Note 3 Lite
 
-PRODUCT_BRAND := Wileyfox
-TARGET_VENDOR := wileyfox
-TARGET_VENDOR_PRODUCT_NAME := Spark_X
-TARGET_VENDOR_DEVICE_NAME := porridgek3
+PRODUCT_BRAND := Coolpad
+TARGET_VENDOR := coolpad
+TARGET_VENDOR_PRODUCT_NAME := Note 3 Lite
+TARGET_VENDOR_DEVICE_NAME := porridgen3

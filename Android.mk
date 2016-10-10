@@ -15,6 +15,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE), porridgek3)
+ifeq ($(TARGET_DEVICE), porridgen3)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif

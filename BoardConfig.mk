@@ -13,12 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-BP_DEVICE_PATH := device/wileyfox/porridgek3
+BP_DEVICE_PATH := device/coolpad/porridgen3
 MTK_PROJECT_CONFIG := $(BP_DEVICE_PATH)/ProjectConfig.mk
 
 include device/wileyfox/porridge/BoardConfig.mk
 
 BOARD_USERDATAIMAGE_PARTITION_SIZE:=12353781760
 
-TARGET_KERNEL_CONFIG := cyanogenmod_porridgek3_defconfig
-TARGET_BOOTLOADER_BOARD_NAME := PORRIDGEK3
+TARGET_KERNEL_CONFIG := cyanogenmod_porridgen3_defconfig
+TARGET_BOOTLOADER_BOARD_NAME := MT6735

@@ -13,7 +13,7 @@
 # limitations under the License.
 #
 
-MTK_PROJECT_CONFIG := device/wileyfox/porridgek3/ProjectConfig.mk
+MTK_PROJECT_CONFIG := device/coolpad/porridgen3/ProjectConfig.mk
 
 # Permissions
 PRODUCT_COPY_FILES += \
